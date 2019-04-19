@@ -28,6 +28,8 @@
   align-items: center;
   margin-top: 10px;
   border: 2.5px solid #931d25;
+  animation: slideDown 0.2s 0s forwards;
+  z-index: -1;
 }
 .dropdown .dropdown-link {
   width: 100%;
@@ -42,7 +44,25 @@
   background-color: #931d25;
 }
 .dropdown .dropdown-hidden {
-  display: none;
+  animation: slideOut 0.2s 0s ease-in forwards;
+}
+@keyframes slideDown {
+  0% {
+    top: -500px;
+  }
+  100% {
+    top: 63px;
+  }
+}
+@keyframes slideOut {
+  0% {
+    top: 63px;
+    display: inherit;
+  }
+  100% {
+    top: -500px;
+    display: hidden;
+  }
 }
 .tabs {
   width: 100%;
