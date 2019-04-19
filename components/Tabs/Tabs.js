@@ -7,8 +7,6 @@ class TabLink {
     // Get the custom data attribute on the Link
     this.data = this.element.dataset.tab;
     
-    console.log(this.data);
-
     // Using the custom data attribute get the associated Item element
     this.itemElement = document.querySelector(`.tabs-item[data-tab='${this.data}']`);
 
@@ -43,8 +41,6 @@ class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
     this.element = element;
-
-    console.log(element);
   }
 
   select() {
