@@ -9,8 +9,9 @@
   }
   .tabs-item {
     display: none; 
-
     width: 75%;
+    animation: fadeIn 0.7s 0s ease-out forwards;
+
     .tabs-item-title {
       font-size: 24px;
       font-weight: bold;
@@ -48,4 +49,13 @@
   }
 }
 
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: opacity(0);
+  }
+  100% {
+    opacity: 1;
+    filter: opacity(1);
+  }
+}
